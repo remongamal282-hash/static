@@ -1,0 +1,17 @@
+{
+    "cleanUrls": true,
+    "rewrites": [
+        {
+            "source": "/api/proxy/:path*",
+            "destination": "/api/proxy"
+        },
+        {
+            "source": "/news/:id",
+            "destination": "/api/ssr?id=:id"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
